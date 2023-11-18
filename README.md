@@ -1,0 +1,22 @@
+# Fake_News_Detection_Analysis
+# Completed Fake News Detection Analysis using LSTM from kaggle dataset
+- Performed data loading and preprocessing
+  - Removed unnecessary columns (id,title,author), Created new column ‘clean_news’ for cleaned text data
+- Text data cleaning
+  - Converted text to lowercase, removed non-alphanumeric characters, newlines, and extra spaces, and removed stop words
+- Text analysis and visualization
+  - Word cloud visualization to visualize frequent words in the entire dataset and in genuine and fake news separately
+- Text Tokenization and Sequence Creation
+  - Tokenize the cleaned text data
+  - Created sequences from the tokenized text for use in the model
+- Word Ebedding setup
+  - Load pre-trained word embeddings (GloVe) from a file
+  - Created an embedding index (a dictionary) to map words to their corresponding word vectors
+- Created Embedding Matrix
+  - Initialized and embedded matrix with zeros
+  - Populate the embedding matrix with pre-trained word vectors for words in the vocabulary
+- Model Definition and Training
+  - Defined a neural network model with an embedding layer, LSTM and dense layers
+  -   Compiled the model with binary cross-entropy loss and ‘adam’ optimizer
+  - Trained the model on the cleaned andtokenized data with pre-trained embeddings
+  - Monitored and visualized the training process using accuracy and loss plots
